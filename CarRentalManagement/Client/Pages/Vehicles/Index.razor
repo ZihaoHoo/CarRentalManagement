@@ -38,10 +38,10 @@ else
                     <td>@vehicle.Year</td>
                     <td>@vehicle.LicensePlateNumber </td>
                     <td>
-                        <a href="/makes/views/@vehicle.Id" class="btn btn-primary">
+                        <a href="/vehicles/view/@vehicle.Id" class="btn btn-primary">
                             <span class="oi oi-book"></span>
                         </a>
-                        <a href="/makes/edit/@vehicle.Id" class="btn btn-warning">
+                        <a href="/vehicles/edit/@vehicle.Id" class="btn btn-warning">
                             <span class="oi oi-pencil"></span>
                         </a>
                         <button class="btn btn-danger" @onclick="@(()=>Delete(vehicle.Id))">

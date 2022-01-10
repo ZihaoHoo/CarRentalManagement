@@ -31,6 +31,7 @@ namespace CarRentalManagement.Server.Controllers
         public async Task<ActionResult> GetColours()
         {
             //return await _context.Colours.ToListAsync();
+
             var Colours = await _unitOfWork.Colours.GetAll();
             return Ok(Colours);
         }
@@ -41,6 +42,7 @@ namespace CarRentalManagement.Server.Controllers
         public async Task<ActionResult> GetColours(int id)
         {
             //var Model = await _context.Colours.FindAsync(id);
+
             var Colour = await _unitOfWork.Colours.Get(q=> q.Id ==id);
 
             if (Colour == null)
